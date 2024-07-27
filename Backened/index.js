@@ -1,11 +1,14 @@
 const express=require("express");
 const app=express();
-const routes=require("./routes/User")
-const db=require("../Backened/config/db")
+// const routes=require("./routes/User")
+const database = require("./config/database");
 
 const cors = require("cors");
+require('dotenv').config();
 
-db.connect();
+const PORT=process.env.PORT || 4000;
+
+database.connect();
 
 app.use(express.json());
 
@@ -16,7 +19,7 @@ app.use(
 	})
 )
 
-app.use("/api/v1/auth", routes);
+// app.use("/api/v1/auth", routes);
 
 app.get("/",(req,res)=>{
     return res.json({
@@ -25,6 +28,6 @@ app.get("/",(req,res)=>{
     });
 });
 
-app.listen(4000,()=>{
-    console.log("app is running on port 4000");
+app.listen(PORT,()=>{
+    console.log(`app is running on port ${PORT}`);
 })
