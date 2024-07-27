@@ -24,9 +24,9 @@ const ProfileDropdown = () => {
         <IoPersonSharp className="text-3xl" />
        {
         open ? (
-          <AiOutlineCaretDown  />
+          <AiOutlineCaretDown   />
         ):(
-          <AiOutlineCaretUp />
+          <AiOutlineCaretUp  />
         )
        }
       </div>

@@ -12,7 +12,7 @@ const Donation = () => {
 
   return (
     <div className="bg-white shadow-md p-4 rounded-lg md:p-6 lg:p-8">
-    <h2 className="text-lg font-bold mb-4 text-gray-800 md:text-xl lg:text-2xl">
+    <h2 className="text-lg font-bold mb-4 md:text-center md:mb-10 md:mt-10 text-gray-800 md:text-xl lg:text-2xl">
       Donation Update
     </h2>
     <div className="overflow-x-auto md:overflow-visible">
@@ -28,7 +28,7 @@ const Donation = () => {
             <tr key={index} className="border-b">
               <td className="px-4 py-2 md:px-6 lg:px-8">{expense.category}</td>
               <td className="px-4 py-2 md:px-6 lg:px-8 text-red-600">
-                ${expense.amount}
+              ₹{expense.amount}
               </td>
             </tr>
           ))}
@@ -37,7 +37,7 @@ const Donation = () => {
               Total Received
             </td>
             <td className="px-4 py-2 md:px-6 lg:px-8 text-green-600">
-              ${totalReceived}
+            ₹{totalReceived}
             </td>
           </tr>
           <tr className="border-b">
@@ -45,7 +45,7 @@ const Donation = () => {
               Total Spent
             </td>
             <td className="px-4 py-2 md:px-6 lg:px-8 text-red-600">
-              ${expenses.reduce((acc, expense) => acc + expense.amount, 0)}
+            ₹{expenses.reduce((acc, expense) => acc + expense.amount, 0)}
             </td>
           </tr>
         </tbody>

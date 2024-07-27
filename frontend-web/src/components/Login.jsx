@@ -32,6 +32,7 @@ const Login = () => {
 
   return (
    <>
+   <h2 className="  mb-4 text-center text-[3rem] font-thin">Login Form</h2>
      <form
     onSubmit={handleSubmit}
     className='flex flex-col w-full h-[50vh] gap-4 md:gap-8 md:mt-8 items-center justify-center'

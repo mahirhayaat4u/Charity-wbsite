@@ -56,6 +56,7 @@ const handleOnSubmit=(e)=>{
   return (
    <>
      <div className="h-[100vh]">
+     <h2 className="  mb-4 text-center text-[3rem] font-thin">Signup Form</h2>
       <form onSubmit={handleOnSubmit} className="flex flex-col md:items-start  gap-5 mb-8 items-center mt-[2rem] md:mt-10 md:ml-[20rem]">
         <label className="flex flex-col md:flex-row md:gap-7">
           <p  className="text-[1.8rem] font-thin">First Name : </p>

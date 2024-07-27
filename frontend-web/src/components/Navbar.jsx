@@ -157,6 +157,14 @@ const Navbar = () => {
                 >
                   CONTACT
                 </Link>
+
+                <Link
+                to="/donationData"
+                
+                className="font-light text-[2rem] md:hover:text-green-400 "
+              >
+                DONATION DATA
+              </Link>
               </ul>
             </div>
           </>
