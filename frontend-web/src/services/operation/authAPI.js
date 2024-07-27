@@ -1,10 +1,10 @@
 import { setLoading, setToken } from "../../slices/authSlice";
 
 import { apiConnector } from "../apiConnector";
-import { endpoints } from "../api";
+// import { endpoints } from "../api";
 import toast from "react-hot-toast";
 
-const { LOGIN_API } = endpoints;
+// const { LOGIN_API ,SIGNUP_API} = endpoints;
 // SIGNUP_API, 
 //signup
 export function signUp(
@@ -19,7 +19,7 @@ export function signUp(
     dispatch(setLoading(true));
     try {
       console.log("before signup response")
-      const response = await apiConnector("POST", '/api/v1/auth/signup', {
+      const response = await apiConnector("POST", '/signup', {
         firstName,
         lastName,
         email,
@@ -50,7 +50,7 @@ export function login(email, password, navigate) {
     dispatch(setLoading(true));
 
     try {
-      const response = await apiConnector("POST", '/api/v1/auth/login', {
+      const response = await apiConnector("POST", '/login', {
         email,
         password,
       });
