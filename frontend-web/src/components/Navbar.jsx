@@ -31,22 +31,22 @@ const Navbar = () => {
 
   return (
     <div className="bg-cyan-950 w-[100vw] md:sticky md:top-0 md:z-50  md:shadow-md  ">
-      <div className="  flex    flex-row   ">
+      <div className="  flex    flex-row  w-full relative ">
         {/* <img
           src={logo}
           alt="logo"
           className="ml-[0.5rem] cursor-pointer w-[8rem] md:max-lg:ml-[5rem] md:w-[6rem] lg:ml-[10rem] filter-custom-color "
           onClick={() => navigate("/")}
         /> */}
-        <div className="ml-[2rem] md:ml-[6rem] py-4 text-white flex flex-col gap-0" onClick={() => navigate("/")}>
-          <h1 className="text-[2rem] md:text-[1.6rem] font-normal ">KINDNESS</h1>
-          <p className="italic text-green-300">FOR WELL BEING</p>
+        <div className="ml-[2rem] mr-4 md:ml-[6rem] py-4 text-white flex flex-col gap-0" onClick={() => navigate("/")}>
+          <h1 className="text-[1.4rem] md:text-[1.6rem] font-normal ">KINDNESS</h1>
+          <p className="italic text-[0.7rem] text-green-300">FOR WELL BEING</p>
         </div>
 
-        <div className="flex flex-row  gap-2 md:absolute md:right-8 md:w-auto md:gap-8 md:mt-8 w-11/12 justify-center items-center   ">
+        <div className="flex flex-row  gap-2  md:absolute md:right-8 md:w-auto md:gap-5 md:mt-8 w-11/12 justify-center items-center   ">
           {token === null && (
             <Link to="/signup">
-              <button className="text-[1.1rem]   text-center  border-2 rounded-xl border-none  px-5 py-2 bg-green-600 md:hover:bg-yellow-300 text-white md:hover:text-black ">
+              <button className="text-[1rem]   text-center  border-2 rounded-xl border-none  px-4 py-2 bg-green-600 md:hover:bg-yellow-300 text-white md:hover:text-black ">
                 SignUp
               </button>
             </Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
 
           {token === null && (
             <Link to="/login">
-              <button className="text-[1.1rem] text-center text-white  border-2 rounded-xl border-green-600 md:hover:border-yellow-300 px-5 py-2 ">
+              <button className="text-[1rem] text-center text-white  border-2 rounded-xl border-green-600 md:hover:border-yellow-300 px-4 py-2 ">
                 Login
               </button>
             </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
 
         <button
           onClick={toggleMenu}
-          className="lg:hidden md:max-lg:absolute md:right-2 md:top-8  text-white mr-5 text-3xl "
+          className="lg:hidden md:max-lg:absolute  md:right-2 md:top-8  text-white mr-5 text-3xl "
         >
           {open ? <IoMdClose /> : <CiMenuBurger />}
         </button>
