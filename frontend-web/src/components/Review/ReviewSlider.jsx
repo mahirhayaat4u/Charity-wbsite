@@ -118,16 +118,16 @@ const ReviewSlider = () => {
   };
 
   return (
-    <div className="w-11/12 md:w-[30%] mx-auto py-8 mb-8 ">
-    <h1 className='text-[2rem] text-center mb-8 font-thin'>Reviews From Our Doner</h1>
-      <div className="flex items-center justify-between mb-4">
+    <div className="w-11/12 md:w-[30%] mx-auto py-8 mb-8 md:flex md:flex-col md:items-center md:justify-center">
+        <h1 className='text-[2rem] text-center text-white mb-8 font-thin'>Reviews From Our Doner</h1>
+      <div className="flex md:w-[40rem] items-center justify-between mb-4">
         <button
           className="text-gray-600 hover:text-gray-900"
           onClick={handlePrev}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-6 w-6 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -155,7 +155,7 @@ const ReviewSlider = () => {
                 key={index}
                 className="w-full flex-shrink-0 px-4 "
               >
-                <div className="bg-slate-200 p-4 rounded-lg shadow-xl">
+                <div className="bg-slate-300 p-4 rounded-lg shadow-xl">
                   <div className="flex items-center mb-4 md:mb-8 md:py-10">
                     <img
                       src={review.avatar}
@@ -180,7 +180,7 @@ const ReviewSlider = () => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-6 w-6 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

@@ -56,10 +56,10 @@ const handleOnSubmit=(e)=>{
   return (
    <>
      <div className="h-auto mb-10">
-     <h2 className="  mb-4 text-center text-[3rem] font-thin">Signup Form</h2>
+     <h2 className="  mb-4 text-center text-[3rem] font-thin text-white">Signup Form</h2>
       <form onSubmit={handleOnSubmit} className="flex flex-col md:items-start  gap-5 mb-8 items-center mt-[2rem] md:mt-10 md:ml-[20rem]">
         <label className="flex flex-col md:flex-row md:gap-7">
-          <p  className="text-[1.5rem] font-thin">First Name : </p>
+          <p  className="text-[1.5rem] font-thin text-white">First Name : </p>
 
           <input
             required
@@ -68,12 +68,12 @@ const handleOnSubmit=(e)=>{
             value={firstName}
             onChange={handleOnChange}
             placeholder="Enter first name"
-            className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300  md:ml-[9rem] "
+            className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300  md:ml-[9.5rem] "
           />
         </label>
 
         <label  className="flex flex-col md:flex-row md:gap-7">
-          <p  className="text-[1.5rem] font-thin">Enter last name :</p>
+          <p  className="text-[1.5rem] font-thin text-white">Enter last name :</p>
           <input
             required
             type="text"
@@ -81,12 +81,12 @@ const handleOnSubmit=(e)=>{
             value={lastName}
             onChange={handleOnChange}
             placeholder="Enter last name"
-             className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300  md:ml-[6rem] "
+             className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300  md:ml-[6.5rem] "
           />
         </label>
 
         <label  className="flex flex-col md:flex-row md:gap-7">
-          <p  className="text-[1.5rem] font-thin">enter email : </p>
+          <p  className="text-[1.5rem] font-thin text-white">Enter email : </p>
           <input
             required
             type="email"
@@ -99,7 +99,7 @@ const handleOnSubmit=(e)=>{
         </label>
 
         <label className="relative flex flex-col md:flex-row md:gap-7">
-        <p  className="text-[1.5rem] font-thin">Enter Password : </p>
+        <p  className="text-[1.5rem] font-thin text-white">Enter Password : </p>
           <input
             required
             type={showPassword ? "text" : "password"}
@@ -107,7 +107,7 @@ const handleOnSubmit=(e)=>{
             value={password}
             onChange={handleOnChange}
             placeholder="Enter password"
-             className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300  md:ml-[6rem] "
+             className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300  md:ml-[7rem] "
           />
 
           <span
@@ -123,7 +123,7 @@ const handleOnSubmit=(e)=>{
         </label>
 
         <label className="relative flex flex-col md:flex-row md:gap-7">
-        <p  className="text-[1.5rem] font-thin">Enter Confirm Password : </p>
+        <p  className="text-[1.5rem] font-thin text-white">Enter Confirm Password : </p>
           <input
             required
             type={showConfirmPassword ? "text" : "password"}
@@ -131,7 +131,7 @@ const handleOnSubmit=(e)=>{
             value={confirmPassword}
             onChange={handleOnChange}
             placeholder="Enter confirm password"
-             className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300   md:ml-[0.1rem]"
+             className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300   md:ml-[1.4rem]"
           />
 
           <span

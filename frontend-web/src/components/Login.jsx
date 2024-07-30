@@ -32,14 +32,14 @@ const Login = () => {
 
   return (
    <>
-   <h2 className="  mb-4 text-center text-[3rem] font-thin">Login Form</h2>
+   <h2 className="  mb-4 text-center text-[3rem] font-thin text-white">Login Form</h2>
      <form
     onSubmit={handleSubmit}
     className='flex flex-col w-full h-[50vh] gap-4 md:gap-8 md:mt-8 items-center justify-center'
     >
 
        <label  className="relative flex flex-col md:flex-row md:gap-7">
-          <p className="text-[1.8rem] font-thin">
+          <p className="text-[1.8rem] font-thin text-white">
             Email Address <sup className='text-pink-500'>*</sup>
           </p>
 
@@ -57,7 +57,7 @@ const Login = () => {
        </label>
 
        <label className="relative flex flex-col md:flex-row md:gap-7">
-         <p className="text-[1.8rem] font-thin">
+         <p className="text-[1.8rem] font-thin text-white">
          Password <sup className='text-pink-500'>*</sup> 
          </p>
 
@@ -69,7 +69,7 @@ const Login = () => {
          onChange={handleOnChange}
          placeholder="Enter Password"
           
-         className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300    "
+         className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300  md:ml-[3.5rem]  "
        />
 
          <span

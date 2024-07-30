@@ -35,20 +35,21 @@ const Contact = () => {
   }, [reset, isSubmitSuccessful]);
 
   return (
- <>
+ <>   
+   <h2 className="  mb-4 text-center text-[3rem] font-thin text-white">Contact Us</h2>
      <form onSubmit={handleSubmit(SubmitForm)} className="flex flex-col  items-center  md:mt-10 md:ml-[10rem]">
-      <div className="flex flex-col items-center gap-4 md:items-start ">
+      <div className="flex flex-col items-center gap-4 md:gap-10 md:items-start ">
 
 
         <label className="mt-6 flex flex-col md:flex-row md:gap-8">
-          <p className="text-[1.8rem] font-thin">First Name : </p>
+          <p className="text-[1.8rem] font-thin text-white">First Name : </p>
           <input
             type="text"
             name="firstName"
             placeholder="First Name"
             id="firstName"
             {...register("firstName", { required: true })}
-            className="text-[1rem] px-6 py-4 border-2 rounded-2xl  border-green-300 md:ml-[6rem] "
+            className="text-[1rem] md:w-[20rem] px-6 py-4 border-2 rounded-2xl  border-green-300 md:ml-[6rem] "
           />
           {errors.firstName && <span>Please enter first name</span>}
         </label>
@@ -56,14 +57,14 @@ const Contact = () => {
 
 
         <label className="flex flex-col md:flex-row md:gap-8 ">
-          <p className="text-[1.8rem] font-thin">Last Name : </p>
+          <p className="text-[1.8rem] font-thin text-white">Last Name : </p>
           <input
             type="text"
             name="lastName"
             placeholder="last Name"
             id="firstName"
             {...register("lastName", { required: true })}
-             className="text-[1rem] px-6 py-4 border-2 rounded-2xl  border-green-300  md:ml-[6rem]"
+             className="text-[1rem] md:w-[20rem] px-6 py-4 border-2 rounded-2xl  border-green-300  md:ml-[6rem]"
           />
           {errors.lastName && <span>Please enter last name </span>}
         </label>
@@ -71,14 +72,14 @@ const Contact = () => {
         
 
         <label className="flex flex-col md:flex-row md:gap-8 ">
-          <p  className="text-[1.8rem] font-thin">Enter your email : </p>
+          <p  className="text-[1.8rem] font-thin text-white">Enter your email : </p>
           <input
             type="email"
             name="email"
             placeholder="email"
             id="email"
             {...register("email", { required: true })}
-             className="text-[1rem] px-6 py-4 border-2 rounded-2xl border-green-300  md:ml-[2rem] "
+             className="text-[1rem] md:w-[20rem] px-6 py-4 border-2 rounded-2xl border-green-300  md:ml-[2rem] "
           />
           {errors.email && <span>Please enter your email</span>}
         </label>
@@ -86,15 +87,15 @@ const Contact = () => {
 
 
         <label className="flex flex-col md:flex-row md:gap-8">
-          <p  className="text-[1.8rem] font-thin">Type Yor Mesaage : </p>
+          <p  className="text-[1.8rem] font-thin text-white">Type Yor Mesaage : </p>
           <textarea
             type="text"
             name="textarea"
             placeholder="write your message..."
             id="textarea"
-            rows={10}
+            rows={5}
             {...register("textarea", { required: true })}
-             className="text-[1rem] px-10 py-4 border-2 rounded-2xl border-green-300   "
+             className="text-[1rem] md:w-[20rem] px-10 py-4 border-2 rounded-2xl border-green-300   "
           />
           {errors.textarea && <span>Please enter your message</span>}
         </label>

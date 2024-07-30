@@ -199,3 +199,13 @@ box-shadow: inset 3px -34px 65px 55px rgba(0,0,0,0.6);
     transform: translateX(100%);
   }
 }
+
+ 
+.quoted::before {
+    content: "\201C"; /* Unicode for left double quotation mark */
+}
+.quoted::after {
+    content: "\201D"; /* Unicode for right double quotation mark */
+}
+ 
+ 
