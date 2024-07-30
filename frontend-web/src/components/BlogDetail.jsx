@@ -23,8 +23,8 @@ const BlogDetail = ({ cards}) => {
      <img src={card.image} alt='imagee' width={600}   className='rounded-xl h-[17rem] md:w-[100rem]'/>
      </div>
       <div className='md:flex md:flex-col md:items-start '>
-      <h1 className='text-[2.5rem] mt-5 font-serif'> {card.heading} </h1>
-      <p className='font-light md:text-[1.5rem] text-justify w/11/12 mt-8'> {card.description} </p>
+      <h1 className='text-[2.5rem] mt-5 font-serif text-white'> {card.heading} </h1>
+      <p className='font-light md:text-[1.5rem] text-justify w/11/12 mt-8 text-white'> {card.description} </p>
       </div>
 
      
