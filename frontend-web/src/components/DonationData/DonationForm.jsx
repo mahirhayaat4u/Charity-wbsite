@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
+import { useSelector } from 'react-redux';
 
 const DonationForm = () => {
+
+  const {token }=useSelector((state)=>state.auth)
    
   const [formData, setFormData] = useState( {
     name:"",
@@ -25,7 +28,7 @@ const DonationForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast.success("you have donated")
+    toast.success(`you have donated Rupees :  ${formData.amount}`)
     setFormData({
       name:"",
       email:"",
@@ -40,7 +43,9 @@ const DonationForm = () => {
     <div className="flex flex-col md:items-start  gap-5 mb-8 items-center mt-[2rem] md:mt-10 md:ml-[20rem]">
       <h2 className="text-lg font-bold mb-4">Donation Form</h2>
       <form onSubmit={handleSubmit} className='flex flex-col gap-10'>
-        <div className="flex flex-col items-center   md:flex-row md:gap-7">
+       {
+        !token && (
+          <div className="flex flex-col items-center   md:flex-row md:gap-7">
           <label className="flex flex-col md:flex-row md:gap-7" htmlFor="name">
             Name
           </label>
@@ -55,7 +60,11 @@ const DonationForm = () => {
             onChange={handleOnChange}
           />
         </div>
-        <div className="flex flex-col items-center   md:flex-row md:gap-7">
+        )
+       }
+       {
+        !token && (
+          <div className="flex flex-col items-center   md:flex-row md:gap-7">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
             Email
           </label>
@@ -70,7 +79,11 @@ const DonationForm = () => {
             onChange={handleOnChange}
           />
         </div>
-        <div className="flex flex-col items-center  md:flex-row md:gap-7">
+        )
+       }
+      {
+        !token && (
+          <div className="flex flex-col items-center  md:flex-row md:gap-7">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
             Phone Number
           </label>
@@ -85,6 +98,8 @@ const DonationForm = () => {
             onChange={handleOnChange}
           />
         </div>
+        )
+      }
         <div className="flex flex-col items-center  md:flex-row md:gap-7">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="amount">
             Amount
@@ -106,7 +121,7 @@ const DonationForm = () => {
           </label>
           <textarea
           required
-           className="text-[1rem] px-6 py-4 border-2 rounded-2xl  border-green-300   md:ml-[1rem] "
+           className="text-[1rem] px-8 py-4 border-2 rounded-2xl  border-green-300   md:ml-[1rem] "
             id="purpose"
             value={purpose}
             name='purpose'

@@ -4,7 +4,7 @@ import banner from "../assets/gaza.webp";
 import Mission from "./Mission";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import ReviewSlider from "./Review/ReviewSlider";
+// import ReviewSlider from "./Review/ReviewSlider";
  
 
 // import blob from "../assets/blob.svg"
@@ -30,11 +30,11 @@ const HeroSection = () => {
               </p>
 
               <p className="text-[2.7rem] md:w-full   font-serif text-black font-extrabold   slide-right">
-                Help The Children
+                Help The Poor
               </p>
               <p className="text-xl ml-3 md:w-full   text-justify   mx-auto w-[90%] block text-black  scale-up-center font-normal">
-                We do whatever it takes to make sure children don’t just survive
-                but thrive.Our Organisation believes that every child should be
+                We do whatever it takes to make sure Poor People don’t just survive
+                but thrive.Our Organisation believes that every poor should be
                 able to make their mark on their world and help build a better
                 future.
               </p>

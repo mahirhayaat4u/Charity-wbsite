@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import {Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import {AiOutlineEyeInvisible ,AiOutlineEye} from 'react-icons/ai'
 import { login } from '../services/operation/authAPI';
 import Footer from './Footer';
@@ -74,7 +74,7 @@ const Login = () => {
 
          <span
              onClick={()=>setShowPassword((prev)=>!prev)}
-             className="absolute right-3 top-[1rem] z-[10] cursor-pointer"
+             className="absolute right-3 top-[4rem]  md:top-[1rem] z-[10] cursor-pointer"
          >
                {
                  showPassword ? (

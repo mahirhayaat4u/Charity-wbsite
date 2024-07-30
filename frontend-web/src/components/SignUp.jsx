@@ -55,11 +55,11 @@ const handleOnSubmit=(e)=>{
 
   return (
    <>
-     <div className="h-[100vh]">
+     <div className="h-auto mb-10">
      <h2 className="  mb-4 text-center text-[3rem] font-thin">Signup Form</h2>
       <form onSubmit={handleOnSubmit} className="flex flex-col md:items-start  gap-5 mb-8 items-center mt-[2rem] md:mt-10 md:ml-[20rem]">
         <label className="flex flex-col md:flex-row md:gap-7">
-          <p  className="text-[1.8rem] font-thin">First Name : </p>
+          <p  className="text-[1.5rem] font-thin">First Name : </p>
 
           <input
             required
@@ -73,7 +73,7 @@ const handleOnSubmit=(e)=>{
         </label>
 
         <label  className="flex flex-col md:flex-row md:gap-7">
-          <p  className="text-[1.8rem] font-thin">Enter last name :</p>
+          <p  className="text-[1.5rem] font-thin">Enter last name :</p>
           <input
             required
             type="text"
@@ -86,7 +86,7 @@ const handleOnSubmit=(e)=>{
         </label>
 
         <label  className="flex flex-col md:flex-row md:gap-7">
-          <p  className="text-[1.8rem] font-thin">enter email : </p>
+          <p  className="text-[1.5rem] font-thin">enter email : </p>
           <input
             required
             type="email"
@@ -99,7 +99,7 @@ const handleOnSubmit=(e)=>{
         </label>
 
         <label className="relative flex flex-col md:flex-row md:gap-7">
-        <p  className="text-[1.8rem] font-thin">Enter Password : </p>
+        <p  className="text-[1.5rem] font-thin">Enter Password : </p>
           <input
             required
             type={showPassword ? "text" : "password"}
@@ -112,7 +112,7 @@ const handleOnSubmit=(e)=>{
 
           <span
             onClick={() => setShowPassword((prev) => !prev)}
-            className=" absolute right-3 top-[4rem] md:top-[1rem] z-[10] cursor-pointer"
+            className=" absolute right-3 top-[3.4rem] md:top-[1rem] z-[10] cursor-pointer"
           >
             {showPassword ? (
               <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
@@ -123,7 +123,7 @@ const handleOnSubmit=(e)=>{
         </label>
 
         <label className="relative flex flex-col md:flex-row md:gap-7">
-        <p  className="text-[1.8rem] font-thin">Enter Confirm Password : </p>
+        <p  className="text-[1.5rem] font-thin">Enter Confirm Password : </p>
           <input
             required
             type={showConfirmPassword ? "text" : "password"}
@@ -136,7 +136,7 @@ const handleOnSubmit=(e)=>{
 
           <span
             onClick={() => setShowConfirmPassword((prev) => !prev)}
-            className="absolute right-3 top-[4rem] md:top-[1rem] z-[10] cursor-pointer"
+            className="absolute right-3 top-[3.4rem] md:top-[1rem] z-[10] cursor-pointer"
           >
             {showConfirmPassword ? (
               <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />

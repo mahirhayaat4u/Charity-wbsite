@@ -1,16 +1,19 @@
 import React, { useRef, useState } from "react";
-import logo from "../assets/custom-logo.png";
+// import logo from "../assets/custom-logo.png";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import "./Hero.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProfileDropdown from "./ProfileDropdown";
 import useOnClickOutside from "./hook/useOnClickOutside";
+import { logout } from "../services/operation/authAPI";
+import {   VscSignOut } from "react-icons/vsc";
 const Navbar = () => {
   const { token } = useSelector((state) => state.auth);
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const dispatch=useDispatch();
 
   const toggleMenu = () => {
     setOpen(!open);
@@ -23,15 +26,22 @@ const Navbar = () => {
   const handleLinkClick = () => {
     setOpen(false);
   };
+
+  
+
   return (
-    <div className="bg-sky-950 w-[100vw] md:sticky md:top-0 md:z-50  md:shadow-md  ">
+    <div className="bg-cyan-950 w-[100vw] md:sticky md:top-0 md:z-50  md:shadow-md  ">
       <div className="  flex    flex-row   ">
-        <img
+        {/* <img
           src={logo}
           alt="logo"
           className="ml-[0.5rem] cursor-pointer w-[8rem] md:max-lg:ml-[5rem] md:w-[6rem] lg:ml-[10rem] filter-custom-color "
           onClick={() => navigate("/")}
-        />
+        /> */}
+        <div className="ml-[2rem] md:ml-[6rem] py-4 text-white flex flex-col gap-0" onClick={() => navigate("/")}>
+          <h1 className="text-[2rem] md:text-[1.6rem] font-normal ">KINDNESS</h1>
+          <p className="italic text-green-300">FOR WELL BEING</p>
+        </div>
 
         <div className="flex flex-row  gap-2 md:absolute md:right-8 md:w-auto md:gap-8 md:mt-8 w-11/12 justify-center items-center   ">
           {token === null && (
@@ -53,7 +63,7 @@ const Navbar = () => {
 
         <button
           onClick={toggleMenu}
-          className="md:hidden text-white mr-3 text-3xl"
+          className="lg:hidden md:max-lg:absolute md:right-2 md:top-8  text-white mr-5 text-3xl "
         >
           {open ? <IoMdClose /> : <CiMenuBurger />}
         </button>
@@ -61,12 +71,12 @@ const Navbar = () => {
         {open ? (
           <div
             onClick={(e) => e.stopPropagation()}
-            className={`absolute w-[70%] mt-5   right-0 z-50 ${
+            className={`absolute w-[70%]    right-0 z-50 ${
               open ? "animate-slide-in" : "animate-slide-out"
             }`}
             ref={ref}
           >
-            <ul className=" flex flex-col text-[3rem]    pb-[5rem] text-white  items-center  bg-blue-950 w-full ">
+            <ul className=" flex flex-col text-[3rem] gap-5 bg-cyan-950/50 backdrop-blur-md pb-[5rem] text-slate-100  items-center  bg-cyan-950 w-full ">
               {open && (
                 <button
                   onClick={toggleMenu}
@@ -76,41 +86,64 @@ const Navbar = () => {
                   <IoMdClose />{" "}
                 </button>
               )}
+              {
+                token && (
+                  <Link to="/profile" onClick={handleLinkClick}  className="font-light text-[1.5rem] scale-up-center">
+                       Profile
+                  </Link>
+                )
+              }
               <Link
                 to="/"
                 onClick={handleLinkClick}
-                className="font-light text-[2rem] scale-up-center"
+                className="font-light text-[1.5rem] scale-up-center"
               >
                 HOME
               </Link>
               <Link
                 to="/about"
                 onClick={handleLinkClick}
-                className="font-light text-[2rem] scale-up-center"
+                className="font-light text-[1.5rem] scale-up-center"
               >
                 ABOUT
               </Link>
               <Link
                 to="/blog"
                 onClick={handleLinkClick}
-                className="font-light text-[2rem] scale-up-center"
+                className="font-light text-[1.5rem] scale-up-center"
               >
                 BLOG
               </Link>
               <Link
                 to="/contact"
                 onClick={handleLinkClick}
-                className="font-light text-[2rem]   scale-up-center"
+                className="font-light text-[1.5rem]   scale-up-center"
               >
                 CONTACT US
               </Link>
               <Link
                 to="/donationData"
                 onClick={handleLinkClick}
-                className="font-light text-[2rem] scale-up-center"
+                className="font-light text-[1.5rem] scale-up-center"
               >
                 DONATION DATA
               </Link>
+           {
+            token && (
+              <div
+                  onClick={() => {
+                    dispatch(logout(navigate));
+                    setOpen(false);
+                  }}
+                  className="flex flex-row gap-2 justify-center text-[2rem] items-center mt-4"
+                >
+                  <VscSignOut />
+                  Logout
+             </div>
+            )
+           }
+
+            
 
               <div className="flex flex-col font-normal gap-6 ">
                 {token === null && (
@@ -138,7 +171,7 @@ const Navbar = () => {
         ) : (
           <>
             <div className="  hidden md:block  md:mx-auto md:text-slate-400 md:font-light md:max-lg:ml-[5rem]  ">
-              <ul className=" flex flex-row cursor-pointer  text-[2rem]  gap-[4rem] md:max-lg:gap-[2rem] mt-[2rem]  md:mr-[5rem]     items-center  ">
+              <ul className=" flex flex-row cursor-pointer  text-[1.6rem]  gap-[2.6rem] md:max-lg:gap-[2rem] mt-[2rem]  md:mr-[5rem]     items-center  ">
                 <Link to="/" className="md:hover:text-green-400">
                   HOME
                 </Link>
@@ -161,7 +194,7 @@ const Navbar = () => {
                 <Link
                 to="/donationData"
                 
-                className="font-light text-[2rem] md:hover:text-green-400 "
+                className="font-light  md:hover:text-green-400 sm:max-xl:hidden "
               >
                 DONATION DATA
               </Link>

@@ -1,36 +1,97 @@
 import React, { useState } from 'react';
+// import { IoPersonSharp } from "react-icons/io5";
 
 const reviews = [
-  {
-    id: 1,
-    text: 'This is a great product!',
-    author: 'John Doe',
-    title: 'Satisfied Customer',
-    description: 'I love this product, its amazing!',
-    avatar: 'https://randomuser.me/api/portraits/men/1.jpg'
-  },
-  {
-    id: 2,
-    text: 'I love this product!',
-    author: 'Jane Doe',
-    title: 'Happy Customer',
-    description: 'This product is so good, I recommend it!',
-    avatar: 'https://randomuser.me/api/portraits/women/2.jpg'
-  },
-  {
-    id: 3,
-    text: 'This product is amazing!',
-    author: 'Bob Smith',
-    title: 'Delighted Customer',
-    description: 'Im so happy with this product, its perfect!',
-    avatar: 'https://randomuser.me/api/portraits/men/3.jpg'
-  }
+  
+    {
+      "id": 1,
+      "text": "Donating here was a wonderful experience!",
+      "author": "Alice Smith",
+      "title": "Happy Donor",
+      "description": "The staff was friendly and the process was smooth. I felt very comfortable.",
+      "avatar": "https://randomuser.me/api/portraits/women/1.jpg"
+    },
+    {
+      "id": 2,
+      "text": "Highly recommend this organization!",
+      "author": "Bob Johnson",
+      "title": "Satisfied Supporter",
+      "description": "I've donated multiple times and each experience has been fantastic.",
+      "avatar": "https://randomuser.me/api/portraits/men/2.jpg"
+    },
+    {
+      "id": 3,
+      "text": "Great cause, great people!",
+      "author": "Carol Lee",
+      "title": "Proud Contributor",
+      "description": "It's wonderful to know my donation is making a difference.",
+      "avatar": "https://randomuser.me/api/portraits/women/3.jpg"
+    },
+    {
+      "id": 4,
+      "text": "Quick and easy donation process!",
+      "author": "David Brown",
+      "title": "Returning Donor",
+      "description": "Everything was well-organized and efficient.",
+      "avatar": "https://randomuser.me/api/portraits/men/4.jpg"
+    },
+    {
+      "id": 5,
+      "text": "Amazing experience!",
+      "author": "Eve Davis",
+      "title": "Grateful Donor",
+      "description": "The staff was so kind and helpful. I will definitely donate again.",
+      "avatar": "https://randomuser.me/api/portraits/women/5.jpg"
+    },
+    {
+      "id": 6,
+      "text": "I felt very safe and well cared for.",
+      "author": "Frank Wilson",
+      "title": "Content Donor",
+      "description": "The hygiene protocols were excellent and I was treated with respect.",
+      "avatar": "https://randomuser.me/api/portraits/men/6.jpg"
+    },
+    {
+      "id": 7,
+      "text": "The best place to donate!",
+      "author": "Grace Martinez",
+      "title": "Satisfied Donor",
+      "description": "The atmosphere was welcoming and the staff was professional.",
+      "avatar": "https://randomuser.me/api/portraits/women/7.jpg"
+    },
+    {
+      "id": 8,
+      "text": "Fantastic organization!",
+      "author": "Henry Anderson",
+      "title": "Loyal Donor",
+      "description": "I appreciate how they handle everything with care and dedication.",
+      "avatar": "https://randomuser.me/api/portraits/men/8.jpg"
+    },
+    {
+      "id": 9,
+      "text": "I'll definitely be back to donate again.",
+      "author": "Ivy Thomas",
+      "title": "Happy Supporter",
+      "description": "It's great to be part of something so impactful.",
+      "avatar": "https://randomuser.me/api/portraits/women/9.jpg"
+    },
+    {
+      "id": 10,
+      "text": "Wonderful staff and great experience!",
+      "author": "Jack White",
+      "title": "Grateful Donor",
+      "description": "The donation process was seamless and the staff was fantastic.",
+      "avatar": "https://randomuser.me/api/portraits/men/10.jpg"
+    }
+  
+  
 ];
 
 const ReviewSlider = () => {
   const [currentReview, setCurrentReview] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
+  
 
   const handleNext = () => {
     setCurrentReview((prevReview) => (prevReview + 1) % reviews.length);
@@ -58,7 +119,7 @@ const ReviewSlider = () => {
 
   return (
     <div className="w-11/12 md:w-[30%] mx-auto py-8 mb-8 ">
-    <h1 className='text-[2rem] text-center mb-8 font-thin'>Reviews From Different People</h1>
+    <h1 className='text-[2rem] text-center mb-8 font-thin'>Reviews From Our Doner</h1>
       <div className="flex items-center justify-between mb-4">
         <button
           className="text-gray-600 hover:text-gray-900"
@@ -94,7 +155,7 @@ const ReviewSlider = () => {
                 key={index}
                 className="w-full flex-shrink-0 px-4 "
               >
-                <div className="bg-green-100 p-4 rounded-lg shadow-xl">
+                <div className="bg-slate-200 p-4 rounded-lg shadow-xl">
                   <div className="flex items-center mb-4 md:mb-8 md:py-10">
                     <img
                       src={review.avatar}

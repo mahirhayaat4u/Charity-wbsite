@@ -13,27 +13,31 @@ const ProfileDropdown = () => {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
 
+  const toggleMenu = () => {
+    setOpen(!open);
+  };
+
   const toggleDropDown =() => setOpen((prev) => !prev);
   const closeDropdown = () => setOpen(false);
 
   useOnClickOutside(ref, closeDropdown);
 
   return (
-    <button onClick={toggleDropDown} className="text-white md:w-[10rem] md:top-[1rem] top-[2rem] flex flex-col absolute right-0 py-5 px-5 w-[30%]  bg-sky-950">
+    <button onClick={toggleDropDown} className="text-white md:w-[10rem] z-40 mr-14 md:top-[1rem] top-[1rem] flex flex-col absolute right-0 py-5 px-5 w-[30%]  bg-cyan-950">
       <div className="flex flex-row gap-6 justify-center items-center">
-        <IoPersonSharp className="text-3xl" />
+        <IoPersonSharp className="text-3xl" onClick={toggleDropDown}/>
        {
         open ? (
-          <AiOutlineCaretDown   />
+          <AiOutlineCaretDown  className="w-[2rem] h-[2rem] block text-white" />
         ):(
-          <AiOutlineCaretUp  />
+          <AiOutlineCaretUp className="w-[2rem] h-[2rem] block text-white" />
         )
        }
       </div>
 
       {open && (
         <div onClick={(e) => e.stopPropagation()}   ref={ref}>
-          <Link to="/profile" className="flex flex-row gap-2 justify-center items-center mt-4">
+          <Link to="/profile" onClick={toggleMenu} className="flex flex-row gap-2 justify-center items-center mt-4">
             <VscDashboard />
             Profile
           </Link>

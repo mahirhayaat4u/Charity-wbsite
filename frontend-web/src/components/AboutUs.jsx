@@ -11,15 +11,22 @@ const AboutUs = () => {
 
 
           <p className='text-[1rem] md:text-[1.5rem] font-light text-justify mt-[2rem] md:leading-8'>
-          Helping those in need through well-established NGO services in India is indeed a charitable act. Narayan Seva Sansthan, one of the well-known non-profit charity organisations in India, boasts of over 480 branches across the country and abroad. Our comprehensive approach touches every facet of life. We work tirelessly towards furthering several initiatives, including eradicating the root causes of disability, providing corrective surgeries, and offering free education and meals to the underprivileged.
+          Kindness for Well Being is a dedicated foundation committed to fostering compassion and support within our communities. Our mission is to promote mental and physical well-being through various programs and initiatives. We believe that acts of kindness, no matter how small, can create a significant positive impact on individuals and society.
           </p>
 
           <p className='text-[1rem] md:text-[1.5rem] font-light text-justify mt-[2rem] md:leading-8'>
-          Our commitment extends to empowering those with visual, hearing, and speech impairments through life skills training and specialised education. Additionally, we provide professional skill development programs for people with disabilities. Established in 1985, Narayan Seva Sansthan had a humble beginning as the charity foundation, ‘A Fistful of Flour', serving meals to the physically and economically disadvantaged. Our mission has since evolved. Today, we offer free corrective surgeries to patients suffering from polio and congenital disabilities. We also provide free artificial limbs to amputees.
+          Our foundation focuses on a range of activities, including mental health awareness campaigns, wellness workshops, and community support services. By collaborating with local organizations and volunteers, we aim to provide resources and assistance to those in need. We are passionate about creating a nurturing environment where everyone feels valued and supported.
           </p>
 
           <p className='text-[1rem] md:text-[1.5rem] font-light text-justify mt-[2rem] mb-[4rem] md:leading-8'>
-          Our headquarters are situated in Udaipur, Rajasthan, India, where our hospital boasts a collective capacity of 1100 beds and attracts patients from across India and the world for polio-related treatments and corrective surgeries. Regardless of caste, creed, or religion, we have conducted over 4,38,453 free-of-cost polio corrective surgeries to date. We continue to transform lives, aiming to be considered the top charity organisation in India that serves those in need, consistently working towards the betterment of society as a whole.
+          At Kindness for Well Being, we envision a world where kindness and empathy are at the forefront of human interactions. Our team is dedicated to inspiring positive change and improving the quality of life for all. We invite you to join us in our mission to spread kindness and promote well-being, making a lasting difference in our communities.
+
+
+
+
+
+
+
           </p>
 
           <Footer/>

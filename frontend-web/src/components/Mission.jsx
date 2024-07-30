@@ -55,7 +55,7 @@ const Mission = () => {
         className="absolute md:hidden md:scale-y-50 md:scale-x-50  md:relative scale-y-150  -top-20"
       />
 
-      <p className="mt-[3rem] md:mt-0 text-2xl font-serif w-[80%] text-center z-10">
+      <p className="mt-[2rem] md:mt-0 text-2xl font-serif w-[80%] text-center z-10">
         We can’t help everyone, but everyone can help someone
       </p>
 
