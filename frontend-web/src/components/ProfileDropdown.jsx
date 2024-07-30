@@ -23,7 +23,7 @@ const ProfileDropdown = () => {
   useOnClickOutside(ref, closeDropdown);
 
   return (
-    <button onClick={toggleDropDown} className="text-white md:w-[10rem] z-40 mr-14 md:top-[1rem] top-[1rem] flex flex-col absolute right-0 py-5 px-5 w-[30%]  bg-cyan-950">
+    <button onClick={toggleDropDown} className="text-white md:w-[10rem] z-40 mr-14 md:top-[1rem] top-[0.5rem] flex flex-col absolute right-0 py-5 px-5 w-[30%]  bg-cyan-950">
       <div className="flex flex-row gap-6 justify-center items-center">
         <IoPersonSharp className="text-3xl" onClick={toggleDropDown}/>
        {
